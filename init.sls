@@ -1,3 +1,6 @@
+include:
+  - podman.runc
+
 podman-deps:
   pkg.installed:
     - pkgs:
