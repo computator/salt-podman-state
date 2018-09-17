@@ -1,6 +1,7 @@
 include:
   - podman.runc
   - podman.conmon
+  - podman.cni
 
 podman-deps:
   pkg.installed:
