@@ -43,6 +43,14 @@ podman:
       - PATH: {{ salt['environ.get']('PATH') }}:/usr/lib/go-1.10/bin
     - creates: /usr/local/bin/podman
 
+podman-config:
+  file.managed:
+    - name: /etc/containers/libpod.conf
+    - contents: |
+        cgroup_manager="cgroupfs"
+    - mode: 644
+    - makedirs: true
+
 podman-policy:
   file.managed:
     - name: /etc/containers/policy.json
