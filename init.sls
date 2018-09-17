@@ -42,3 +42,12 @@ podman:
       - GOPATH: /tmp/salt_podman_tmp_gopath
       - PATH: {{ salt['environ.get']('PATH') }}:/usr/lib/go-1.10/bin
     - creates: /usr/local/bin/podman
+
+podman-policy:
+  file.managed:
+    - name: /etc/containers/policy.json
+    - source: https://raw.githubusercontent.com/containers/skopeo/master/default-policy.json
+    - skip_verify: true
+    - mode: 644
+    - makedirs: true
+    - replace: false
