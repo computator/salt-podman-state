@@ -1,6 +1,5 @@
 include:
   - podman.ppa
-  - podman.registrycfg
 
 podman:
   pkg.installed:
