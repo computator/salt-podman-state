@@ -1,8 +1,8 @@
 include:
-  - podman.ppa
+  - podman.repo
 
 buildah:
   pkg.installed:
     - name: buildah
     - require:
-      - pkgrepo: podman-ppa
+      - pkgrepo: podman-repo

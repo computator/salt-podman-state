@@ -1,8 +1,8 @@
 include:
-  - podman.ppa
+  - podman.repo
 
 podman:
   pkg.installed:
     - name: podman
     - require:
-      - pkgrepo: podman-ppa
+      - pkgrepo: podman-repo
